@@ -76,6 +76,16 @@ void quick_sort(int low, int high) {
 	quick_sort(j + i, high);
 }
 
+void display() {
+	cout << "\n-------------------------------" << endl;
+	cout << "Sorted Array" << endl;
+	cout << "\n-------------------------------" << endl;
+
+	for (int i = 0; i < n; i++) {
+		cout << arr[i] << " ";
+	}
+}
+
 int main() {
 	cout << endl;
 }
