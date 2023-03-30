@@ -90,5 +90,5 @@ void display() {
 }
 
 int main() {
-	cout << endl;
+	input();
 }
