@@ -65,6 +65,15 @@ void quick_sort(int low, int high) {
 			mov_count++;
 		}
 	}
+	
+	if (low < j) {						//j now containt the index of the last element in the sorted list
+		swap(low, j);
+		mov_count++;
+	}
+	quick_sort(low, j - i);
+
+	//sort of the lost on the right of pivot using quick sort
+	quick_sort(j + i, high);
 }
 
 int main() {
