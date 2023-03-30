@@ -24,7 +24,7 @@ void input() {
 
 	for (int i = 0; i < n; i++) {
 		cout << "<" << (i + 1) << ">";
-		cin >> arr[1];
+		cin >> arr[i];
 	}
 }
 
@@ -49,7 +49,7 @@ void quick_sort(int low, int high) {
 
 	while (i <= j) {
 		//search for an element greater than pivot
-		while ((arr[i] <= pivot) && (i <= high)) {
+		while ((arr[i] <= pivot) && (j <= high)) {
 			i++;
 			cmp_count++;
 		}
@@ -70,7 +70,7 @@ void quick_sort(int low, int high) {
 		swap(low, j);
 		mov_count++;
 	}
-	quick_sort(low, j - i);
+	quick_sort(low, j - 1);
 
 	//sort of the lost on the right of pivot using quick sort
 	quick_sort(j + i, high);
